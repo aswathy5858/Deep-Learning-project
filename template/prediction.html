@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Classification</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    
+    <!-- Custom CSS -->
+    <style>
+        /* Custom navbar color */
+        .navbar-custom {
+            background-color:green; /* Yellow color */
+        }
+        .footer-custom {
+            background-color: green; /* Yellow color */
+            text-align: center; /* Center align text */
+            padding: 10px 0; /* Add some padding for better visibility */
+            position: fixed; /* Fixed position to stick to bottom */
+            width: 100%; /* Full width */
+            bottom: 0; /* Stick to the bottom */
+            left: 0; /* Align to left */
+        }
+        .upload-box {
+            border: 1px solid #ddd; /* Add a border */
+            padding: 20px; /* Add padding */
+            border-radius: 10px; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <a class="navbar-brand" href="index.html"><i class="fas fa-home"></i> Home</a>
+    </nav>
+    
+    <br><br>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body upload-box">
+                        <h1 class="text-center">Upload Image</h1>
+                        <br><br>
+                        <form action="/predict" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="file" class="form-control-file" name="file" required>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-primary">Upload and Predict</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br><br>
+    
+    <!-- Footer -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <!-- Footer content goes here -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
